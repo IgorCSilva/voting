@@ -1,4 +1,5 @@
-# Voting
+# Voting 
+- Seguindo vídeos de Thiago Guimarães: https://www.youtube.com/watch?v=EmHfoH3FOM0&list=PLuNXOD_m9Am7Kmgk8lOO5fS-kjScNZBLT
 
 To start your Phoenix server:
 
