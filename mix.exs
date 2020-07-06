@@ -44,7 +44,8 @@ defmodule Voting.MixProject do
       {:jason, "~> 1.0"},
       {:plug_cowboy, "~> 2.0"},
       {:bcrypt_elixir, "~> 2.0"},
-      {:ex_machina, "~> 2.4", only: :test}
+      {:ex_machina, "~> 2.4", only: :test},
+      {:guardian, "~> 2.0"}
     ]
   end
 
