@@ -7,6 +7,8 @@ defmodule VotingWeb.Router do
 
   pipeline :api_as_admin do
     plug :accepts, ["json"]
+
+    # Caso seja preciso a autenticação o erro já ocorre aqui.
     plug VotingWeb.AuthAccessPipeline
   end
 
@@ -19,7 +21,7 @@ defmodule VotingWeb.Router do
   scope "/api/v1", VotingWeb do
     pipe_through :api_as_admin
 
-    post("/election", ElectionController, :create)
+    post("/elections", ElectionController, :create)
   end
 
   # Enables LiveDashboard only for development

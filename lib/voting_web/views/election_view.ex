@@ -5,6 +5,7 @@ defmodule VotingWeb.ElectionView do
     %{
       status: "ok",
       data: %{
+        id: election.id,
         name: election.name,
         cover: election.cover,
         notice: election.notice,

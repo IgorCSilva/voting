@@ -4,11 +4,14 @@ defmodule VotingWeb.ElectionController do
   alias Voting.CreateElection
 
   def create(conn, params) do
+    admin = VotingWeb.Guardian.Plug.current_resource(conn)
+    params = Map.put(params, "created_by_id", admin.id)
+    
     case CreateElection.run(params) do
       {:ok, election} ->
         conn
         |> put_status(201)
-        |> render(conn, "election.json", %{election: election})
+        |> render("election.json", %{election: election})
       
       {:error, _} ->
         conn
